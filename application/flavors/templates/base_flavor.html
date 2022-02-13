@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+{% block header %}
+	<h2>The best flavors in the world.</h2>
+{% endblock %}
+
+{% block messages %}
+	{% if messages %}
+		<ul class="messages">
+			{% for message in messages %}
+				<li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+					{{ message }}
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+{% endblock %}
+
+<hr>
+{% block content %}
+{% endblock %}
+<hr>
+
+{% block footer %}
+	<h2>Flavor app</h2>
+{% endblock %}
+
+</body>
+</html>

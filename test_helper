@@ -1,0 +1,2 @@
+1. pip install coverage     # install package
+2. coverage run manage.py test app_name -v 2      # '-v 2' for more detail

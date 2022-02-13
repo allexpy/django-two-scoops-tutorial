@@ -1,0 +1,9 @@
+{% extends 'base_flavor.html' %}
+
+{% block content %}
+
+	<form action="" method="post">{% csrf_token %}
+		{{ form.as_p }}
+	<button type="Submit">Save</button>
+	</form>
+{% endblock %}

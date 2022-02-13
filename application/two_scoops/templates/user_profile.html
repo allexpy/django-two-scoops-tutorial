@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<p>Email: {{ object.email }}</p>
+	<p>Can sprinkle: {{ object.can_sprinkle }}</p>
+	<p>First name: {{ object.first_name }}</p>
+	<p>Last name: {{ object.last_name }}</p>
+	<p><a href="{% url 'two_scoops:user-profile-edit' %}">Edit</a></p>
+</body>
+</html>

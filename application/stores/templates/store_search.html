@@ -1,0 +1,23 @@
+{% extends 'base_store.html' %}
+
+
+{% block content %}
+	<p>Search what you wish:</p>
+	<form action="" method="GET">
+		<input type="Text" name="q" />
+		<button type="Submit">search</button>
+	</form>
+
+	{% if object_list %}
+		<p>Found {{ object_list|length }} store{{ object_list|pluralize }}:</p>
+		{% for object in object_list %}
+			<ul>
+				<li>{{ object.title }}</li>
+			</ul>
+		{% endfor %}
+	{% endif %}
+
+
+	<p>Don't wish to search anything now?</p>
+	<a href="{% url 'store:store-list' %}">Return home</a>
+{% endblock %}

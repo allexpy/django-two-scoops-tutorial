@@ -1,0 +1,14 @@
+{% extends 'base_flavor.html' %}
+
+{% block content %}
+	<p><span style="font-weight: bold;">Title:</span> {{ object.title }}</p>
+	<p><span style="font-weight: bold;">Slug:</span> {{ object.slug }}</p>
+	<p><span style="font-weight: bold;">Remaining-scoops:</span> {{ object.get_scoops_remaining_display }}</p>
+	<p><span style="font-weight: bold;">ID:</span> {{ object.id }}</p>
+	<p><span style="font-weight: bold;">Created on:</span> {{ object.created }}</p>
+	<p><span style="font-weight: bold;">Created by:</span> {{ object.created_by }}</p>
+
+	<a href="{% url 'flavors:update' object.slug %}">Edit</a>
+	<a href="{% url 'flavors:list_flavor' %}">Return home</a>
+
+{% endblock %}

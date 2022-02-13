@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}Two scoops of django{% endblock %}</title>
+</head>
+<body>
+	{% block header %}
+		<h3>Two scoops of django 1.11 tutorial</h3><hr>
+
+	{% endblock header %}
+
+	{% block content %}{% endblock content %}<hr>
+
+	{% block footer %}
+		<h3>The best django book.</h3>
+	{% endblock footer %}
+</body>
+</html>

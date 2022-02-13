@@ -1,0 +1,20 @@
+{% extends 'base_flavor.html' %}
+{% include 'search.html' %}
+
+{% block content %}
+	{% for object in ordered_flavors %}
+		<ul>
+			<li><a href="{% url 'flavors:detail' object.slug %}">{{ object.title }}</a></li>
+		</ul>
+	{% endfor %}
+	<hr>
+	{% for object in flavors %}
+		<ul>
+			<li>{{ object }}</li>
+		</ul>
+	{% endfor %}
+	<a href="{% url 'flavors:create_flavor' %}">Create flavor</a>
+
+	<a href="{% url 'flavors:search' %}">Search</a>
+
+{% endblock %}

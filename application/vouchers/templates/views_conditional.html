@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Roys and Greenfelds</title>
+</head>
+<body>
+	<h2>Greenfelds who want ice cream.</h2>
+	<ul>
+	{% for voucher in greenfelds %}
+		<li>{{ voucher.name }}</li>
+	{% endfor %}
+	</ul>
+
+	<h2>Roys who want ice cream.</h2>
+	<ul>
+	{% for voucher in roys %}
+		<li>{{ voucher.name }}</li>
+	{% endfor %}
+	</ul>
+</body>
+</html>

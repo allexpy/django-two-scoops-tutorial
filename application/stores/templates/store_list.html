@@ -1,0 +1,16 @@
+{% extends 'base_store.html' %}
+{% include 'store_search.html' %}
+
+{% block content %}
+	{% for object in stores %}
+		<ul>
+			<li>{{ object.title }}</li>
+		</ul>
+	{% endfor %}
+
+	<p>Search your store</p>
+	<form action="" method="GET">
+		<input type="Text" name="q">
+		<button type="Submit">Search</button>
+	</form>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base_flavor.html' %}
+
+
+{% block content %}
+	<p>Search what you wish:</p>
+	<form action="" method="GET">
+		<input type="Text" name="q" />
+		<button type="Submit">search</button>
+	</form>
+
+	{% if object_list %}
+		<p>Found {{ object_list|length }} flavor{{ object_list|pluralize }}:</p>
+		{% for object in object_list %}
+			<ul>
+				<li><a href="{% url 'flavors:detail' object.slug %}">{{ object.title }}</a></li>
+			</ul>
+		{% endfor %}
+	{% endif %}
+
+
+	<p>Don't wish to search anything now?</p>
+	<a href="{% url 'flavors:list_flavor2' %}">Return home</a>
+{% endblock %}

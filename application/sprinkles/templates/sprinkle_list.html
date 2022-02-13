@@ -1,0 +1,11 @@
+{% extends 'base_sprinkles.html' %}
+
+{% block content %}
+	{% if request.can_sprinkle %}
+		<ul>
+			{% for sprinkle in sprinkles %}
+				<li><a href="{% url 'details' sprinkle.pk %}">{{ sprinkle.name }}</a></li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+{% endblock %}

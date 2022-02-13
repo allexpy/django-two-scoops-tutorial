@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+	{{ form.as_p }}
+
+	{% for formset in inlines %}
+		{{ formset.as_p }}
+	{% endfor %}
+	<input type="submit" value="Submit"/>
+</form>
+</body>
+</html>

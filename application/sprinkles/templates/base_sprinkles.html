@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	{% block header %}
+		<h3>Sprinkles</h3>
+	{% endblock %}
+	<hr>
+	{% block content %}{% endblock %}
+	<hr>
+	{% block footer %}<h3>Utils, decorators and so on..</h3>{% endblock %}
+</body>
+</html>

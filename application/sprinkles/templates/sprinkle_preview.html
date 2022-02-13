@@ -1,0 +1,9 @@
+{% extends 'base_sprinkles.html' %}
+
+{% block content %}
+	<ul>
+		{% for sprinkle in sprinkles %}
+			<li><a href="{% url 'details' sprinkle.pk %}">{{ sprinkle.name }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}

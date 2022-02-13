@@ -1,0 +1,15 @@
+{% extends 'base_flavor.html' %}
+
+{% block content %}
+
+<form action="" method="POST">{% csrf_token %}
+	<p style="color: red;">{{ form.title.errors.as_text }}</p>
+	{% for field in form  %}
+		<p>{{ field.label }}: {{ field }}</p>
+	{% endfor %}
+	<button type="Submit">Salveaza</button>
+
+</form>
+
+	<a href="{% url 'flavors:list_flavor' %}">Return home</a>
+{% endblock %}
